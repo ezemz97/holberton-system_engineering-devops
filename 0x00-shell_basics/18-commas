@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lmav
+ls -maXvF
