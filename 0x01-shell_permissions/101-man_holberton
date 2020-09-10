@@ -6,7 +6,6 @@
 eniac
 .SH DESCRIPTION
 Eniac was Turing-complete, and able to solve "a large class of numerical problems" through reprogramming.
-.PP asda
 .SH OPTIONS
 .B eniac
 does not take any options
