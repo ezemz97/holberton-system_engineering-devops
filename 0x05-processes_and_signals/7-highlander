@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Displays "To infinity and beyond" indefinitely and catches(trap) the SIGTERM signal.
+# Displays "To infinity and beyond" indefinitely
+# Catches (trap) the SIGTERM signal.
 
 trap "echo I am invincible!!!" SIGTERM
 while true
