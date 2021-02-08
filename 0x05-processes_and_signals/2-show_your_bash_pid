@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays a list of currently running BASH processes, in a user-oriented format.
+
+ps auxf | grep "bash"
