@@ -1,3 +1,4 @@
+# Creates a file in /tmp with 0744 permissions
 file { '/tmp/holberton':
   ensure  => present,
   owner   => 'www-data',
@@ -5,4 +6,3 @@ file { '/tmp/holberton':
   mode    => '0744',
   content => 'I love Puppet',
   }
-
