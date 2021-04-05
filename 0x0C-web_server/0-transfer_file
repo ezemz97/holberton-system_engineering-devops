@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Copy a certain file over SCP to my holberton ubuntu server
+# Should take four arguments
+# (Default destination of scp transfer is $HOME if no destination is specified)
+
+if [[ $# -ne 4 ]]
+then
+    echo 'Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY'
+else
+    file = $1; ip = $2; user = $3; key = $4
+    scp -o StrictHostKeyChecking=no -i $key $file $user@$ip
+fi
