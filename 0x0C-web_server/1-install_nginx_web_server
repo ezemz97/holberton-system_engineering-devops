@@ -2,5 +2,5 @@
 # Install nginx server and configure the index.html
 apt-get -y update
 apt-get -y install nginx
-echo "Holberton School" | tee /var/www/html/index.html
+echo "Holberton School" | tee /var/www/html/index.nginx-debian.html
 service nginx restart
