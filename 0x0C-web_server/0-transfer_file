@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # Copy a certain file over SCP to my holberton ubuntu server
 # Should take four arguments
+
+# Example:
+# ./0-transfer_file 1-install_nginx_web_server 34.139.183.139 ubuntu ~/.ssh/id_rsa\
+
 # (Default destination of scp transfer is $HOME if no destination is specified)
 
 if [[ $# -ne 4 ]]
