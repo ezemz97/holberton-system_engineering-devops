@@ -6,8 +6,8 @@ apt-get -y install haproxy=1.6.\*
 echo -e "
 backend web-backend
     balance roundrobin
-    server web-01 34.139.183.139:80 check
-    server web-02 35.196.251.46:80 check
+    server web1 34.139.183.139:80 check
+    server web2 35.196.251.46:80 check
 
 frontend http
     bind *:80
