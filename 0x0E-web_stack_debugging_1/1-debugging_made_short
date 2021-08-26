@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Changes nginx to listen to port 80
+# Changes nginx to listen to port 80 (https://stackoverflow.com/questions/10445934/change-multiple-files)
 find /etc/nginx/sites-* -name 'default' -exec sed -i 's/8080/80/g' {} +
 sudo service nginx restart 1> /dev/null
 sudo pkill -o nginx
