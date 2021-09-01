@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-# Installs and configures HAProxy (to be used in the load balancer server).
-apt-get -y update
-apt-get -y install haproxy=1.6.\*
+#Install your load balancer
 
-echo -e "
-backend web-backend
+apt update
+apt install -y haproxy=1.6.\*
+
+printf %s "
+frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+backend http_back
     balance roundrobin
-    server web1 34.139.183.139:80 check
-    server web2 35.196.251.46:80 check
+    server 2383-web-01 34.139.183.139:80 check
+    server 2383-web-02 35.196.251.46:80 check
+" >> /etc/haproxy/haproxy.cfg
 
-frontend http
-    bind *:80
-    mode http
-    default_backend web-backend
-    " >> /etc/haproxy/haproxy.cfg
-
-service haproxy restart
+service haproxy start
