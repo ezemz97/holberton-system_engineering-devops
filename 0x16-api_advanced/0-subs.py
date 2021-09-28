@@ -6,7 +6,7 @@ import requests
 def number_of_subscribers(subreddit):
     r = subreddit
     data = requests.get("https://www.reddit.com/r/{}/about.json".format(r),
-                        headers={'User-agent': 'Pito'},
+                        headers={'User-agent': 'ezenoese'},
                         allow_redirects=False)
 
     if data.status_code == 200:
