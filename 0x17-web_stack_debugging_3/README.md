@@ -1,4 +1,1 @@
-exec { '':
-  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php; sudo service apache2 restart',
-  path    => '/bin',
-}
+Web Stack Debugging 3
